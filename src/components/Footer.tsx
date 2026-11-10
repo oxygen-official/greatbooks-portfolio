@@ -1,5 +1,5 @@
 import React from 'react';
-import { BookMarked, ArrowUp, Printer } from 'lucide-react';
+import { BookMarked, ArrowUp } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   const scrollToTop = () => {
@@ -22,14 +22,6 @@ export const Footer: React.FC = () => {
           </div>
 
           <div className="flex items-center gap-4 text-xs font-medium">
-            <button
-              onClick={() => window.print()}
-              className="hover:text-stone-900 dark:hover:text-stone-200 cursor-pointer flex items-center gap-1"
-            >
-              <Printer className="w-3.5 h-3.5" />
-              <span>Print Submission</span>
-            </button>
-            <span>·</span>
             <button
               onClick={scrollToTop}
               className="hover:text-stone-900 dark:hover:text-stone-200 cursor-pointer flex items-center gap-1"

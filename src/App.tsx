@@ -6,16 +6,14 @@ import { FavoriteMasterpieceSection } from './components/FavoriteMasterpieceSect
 import { SummaryOfLearningSection } from './components/SummaryOfLearningSection';
 import { PersonalReflectionSection } from './components/PersonalReflectionSection';
 import { AnalysisDetailModal } from './components/AnalysisDetailModal';
-import { EditProfileModal } from './components/EditProfileModal';
 import { Footer } from './components/Footer';
 import { INITIAL_STUDENT_PROFILE } from './data/summaryAndReflection';
 import { LiteraryAnalysis, StudentProfileData } from './types/portfolio';
 
 export default function App() {
   const [isDark, setIsDark] = useState<boolean>(false);
-  const [profile, setProfile] = useState<StudentProfileData>(INITIAL_STUDENT_PROFILE);
+  const [profile] = useState<StudentProfileData>(INITIAL_STUDENT_PROFILE);
   const [selectedAnalysis, setSelectedAnalysis] = useState<LiteraryAnalysis | null>(null);
-  const [isEditProfileOpen, setIsEditProfileOpen] = useState<boolean>(false);
 
   // Sync dark class on html
   useEffect(() => {
@@ -45,7 +43,6 @@ export default function App() {
         {/* Part 1: Student Profile */}
         <StudentProfileSection
           profile={profile}
-          onEditProfile={() => setIsEditProfileOpen(true)}
         />
 
         {/* Part 2: Compilation of Seven (7) Literary Analyses */}
@@ -71,14 +68,6 @@ export default function App() {
       <AnalysisDetailModal
         analysis={selectedAnalysis}
         onClose={() => setSelectedAnalysis(null)}
-      />
-
-      {/* Customizer Modal for Student Profile */}
-      <EditProfileModal
-        isOpen={isEditProfileOpen}
-        onClose={() => setIsEditProfileOpen(false)}
-        profile={profile}
-        onSave={updated => setProfile(updated)}
       />
 
     </div>

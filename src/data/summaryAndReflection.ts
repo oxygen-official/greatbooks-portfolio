@@ -2,15 +2,15 @@ import { SummaryConcept, ReflectionAnswer, StudentProfileData } from '../types/p
 
 export const INITIAL_STUDENT_PROFILE: StudentProfileData = {
   fullName: 'Reynaldo Bertulfo Jr.',
-  course: 'Bachelor of Secondary Education / Arts & Sciences',
-  yearAndSection: '3rd Year · Section A',
-  institution: 'Department of Humanities & Literature',
+  course: 'College of Engineering',
+  yearAndSection: '2nd Year - NRh',
+  institution: 'College of Engineering / University of Nueva Caceres',
   instructorName: 'Professor of Great Books',
   submissionDate: 'Academic Term 2026',
-  photoUrl: '', // Default avatar icon
-  personalIntroduction: 'I am a passionate student of literature and the humanities, dedicated to understanding how ancient narratives continue to illuminate contemporary human dilemmas. Through the Great Books course, I have cultivated a disciplined habit of reading canonical texts not as static relics of the distant past, but as dynamic, living dialogues that challenge our assumptions about justice, honor, suffering, and duty.',
-  readingInterestsAndExperiences: 'My literary journey began with classical mythology, Philippine folktales, and philosophical fiction. Over the years, I have gravitated toward monumental world epics, tragic drama, and introspective poetry. Reading across non-Western and Western canons has expanded my empathy and granted me the tools to deconstruct cultural narratives and recognize common threads of humanity across divergent historical eras.',
-  expectationsAndLearningJourney: 'Entering Great Books, I initially expected a daunting survey of archaic texts requiring laborious translation and memorization. What I discovered instead was a transformative intellectual crucible. Great Books has challenged me to interrogate my own biases, apply diverse critical lenses, and articulate nuanced arguments about moral ambiguity. It has permanently altered how I view the world, society, and my own ethical responsibilities.'
+  photoUrl: 'https://cdn.phototourl.com/member/2026-11-10-9b98addc-64fa-4280-b37d-0e3c8c430433.jpg',
+  personalIntroduction: 'I am an engineering student at the University of Nueva Caceres dedicated to understanding how timeless literature illuminates ethical dilemmas, human resilience, and societal design. Through the Great Books course, I have cultivated a disciplined habit of reading canonical texts not as static relics of the past, but as dynamic dialogues that challenge our assumptions about duty, honor, leadership, and human nature.',
+  readingInterestsAndExperiences: 'My literary journey balances scientific problem-solving with classical mythology, world epics, and philosophical narratives. Reading across Eastern and Western traditions has broadened my perspective, fostering critical thinking, ethical judgment, and deep empathy essential for both humanistic inquiry and engineering leadership.',
+  expectationsAndLearningJourney: 'Entering Great Books, I initially expected an abstract survey of ancient writings. What I discovered instead was an intellectual crucible. The course has taught me to apply diverse critical lenses, analyze complex moral trade-offs, and recognize the universal threads that connect ancient storytelling to modern societal challenges.'
 };
 
 export const LEARNING_SUMMARY_CONCEPTS: SummaryConcept[] = [

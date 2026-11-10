@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BookMarked, Sun, Moon, Printer, Menu, X } from 'lucide-react';
+import { BookMarked, Sun, Moon, Menu, X } from 'lucide-react';
 
 interface NavigationProps {
   isDark: boolean;
@@ -9,10 +9,6 @@ interface NavigationProps {
 
 export const Navigation: React.FC<NavigationProps> = ({ isDark, onToggleTheme }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  const handlePrint = () => {
-    window.print();
-  };
 
   return (
     <header className="sticky top-0 z-40 w-full border-b border-stone-200/90 dark:border-stone-800/90 bg-stone-50/95 dark:bg-stone-950/95 backdrop-blur-md transition-colors duration-200">
@@ -69,14 +65,6 @@ export const Navigation: React.FC<NavigationProps> = ({ isDark, onToggleTheme })
             aria-label="Toggle dark mode"
           >
             {isDark ? <Sun className="w-4 h-4 text-amber-400" /> : <Moon className="w-4 h-4 text-stone-700" />}
-          </button>
-
-          <button
-            onClick={handlePrint}
-            className="px-4 py-2 text-xs font-semibold text-stone-50 bg-stone-900 dark:text-stone-900 dark:bg-stone-100 rounded-lg hover:bg-stone-800 dark:hover:bg-white transition-colors whitespace-nowrap shrink-0 flex items-center gap-1.5 shadow-sm cursor-pointer"
-          >
-            <Printer className="w-3.5 h-3.5" />
-            <span className="hidden sm:inline">Print / PDF</span>
           </button>
 
           <button

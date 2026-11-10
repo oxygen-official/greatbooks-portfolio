@@ -1,40 +1,28 @@
 import React from 'react';
-import { User, GraduationCap, Calendar, BookOpen, Compass, Edit3 } from 'lucide-react';
+import { User, GraduationCap, Calendar, BookOpen, Compass } from 'lucide-react';
 import { StudentProfileData } from '../types/portfolio';
 
 interface StudentProfileSectionProps {
   profile: StudentProfileData;
-  onEditProfile: () => void;
 }
 
 export const StudentProfileSection: React.FC<StudentProfileSectionProps> = ({
-  profile,
-  onEditProfile
+  profile
 }) => {
   return (
     <section id="student-profile" className="pt-10 pb-16 md:pt-16 md:pb-24">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Academic Course Badge & Header */}
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 pb-6 border-b border-stone-200 dark:border-stone-800">
-          <div>
-            <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-amber-800 dark:text-amber-500 font-bold mb-1">
-              <span>Section 1</span>
-              <span>·</span>
-              <span>Culminating Performance Task</span>
-            </div>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-stone-950 dark:text-stone-50 font-classical [text-wrap:balance]">
-              My Literary Journey: A Great Books Digital Portfolio
-            </h1>
+        <div className="mb-8 pb-6 border-b border-stone-200 dark:border-stone-800">
+          <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-amber-800 dark:text-amber-500 font-bold mb-1">
+            <span>Section 1</span>
+            <span>·</span>
+            <span>Culminating Performance Task</span>
           </div>
-
-          <button
-            onClick={onEditProfile}
-            className="self-start sm:self-center inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-semibold text-stone-700 dark:text-stone-300 bg-white dark:bg-stone-900 border border-stone-300 dark:border-stone-700 rounded-lg hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors shadow-xs cursor-pointer"
-          >
-            <Edit3 className="w-3.5 h-3.5 text-amber-700 dark:text-amber-400" />
-            <span>Customize Profile Details</span>
-          </button>
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-stone-950 dark:text-stone-50 font-classical [text-wrap:balance]">
+            My Literary Journey: A Great Books Digital Portfolio
+          </h1>
         </div>
 
         {/* Student Profile Card (Part 1 of PDF) */}
@@ -49,6 +37,7 @@ export const StudentProfileSection: React.FC<StudentProfileSectionProps> = ({
                   <img
                     src={profile.photoUrl}
                     alt={profile.fullName}
+                    referrerPolicy="no-referrer"
                     className="w-full h-full object-cover"
                   />
                 ) : (
