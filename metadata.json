@@ -1,0 +1,6 @@
+{
+  "name": "My Literary Journey — Great Books Digital Portfolio",
+  "description": "Culminating Digital Portfolio in Great Books featuring student profile, seven comprehensive literary analyses across global classics, favorite masterpiece study, learning summary, and personal reflections.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
